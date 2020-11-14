@@ -1,0 +1,24 @@
+{
+    "name": "Premiere League Website",
+    "short_name": "PL Website",
+    "description": "Shows standings, teams, and favorite teams in Premiere League.",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#26216e",
+    "theme_color": "#26216e",
+    "gcm_sender_id": "254595331674",
+    "icons": [
+        {
+            "src": "/icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ]
+}
