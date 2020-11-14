@@ -1,0 +1,1 @@
+LINK_HOSTING = "https://albarranaufala.github.io/"
