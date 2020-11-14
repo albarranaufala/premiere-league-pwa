@@ -12,6 +12,14 @@ let status = response => {
     }
 }
 
+const fetchApi = function(url) {    
+    return fetch(url, {
+        headers: {
+            'X-Auth-Token': API_KEY
+        }
+    });
+};
+
 const getStandings = leagueID => {
     let isDataCachedEmpty = true;
 
@@ -31,11 +39,7 @@ const getStandings = leagueID => {
             });
     }
 
-    fetch(`${BASE_URL}/v2/competitions/${leagueID}/standings`, {
-            headers: {
-                'X-Auth-Token': API_KEY,
-            }
-        })
+    fetchApi(`${BASE_URL}/v2/competitions/${leagueID}/standings`)
         .then(status)
         .then(response => response.json())
         .then(data => {
@@ -68,11 +72,7 @@ const getTeams = leagueID => {
             });
     }
 
-    fetch(`${BASE_URL}/v2/competitions/${leagueID}/teams`, {
-            headers: {
-                'X-Auth-Token': API_KEY,
-            }
-        })
+    fetchApi(`${BASE_URL}/v2/competitions/${leagueID}/teams`)
         .then(status)
         .then(response => response.json())
         .then(data => {
